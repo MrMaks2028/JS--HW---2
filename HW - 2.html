@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork - 2: Arrays and Functions</title>
+</head>
+<body>
+    <div id="box">Задача 3</div>
+    <script>
+        //Задача 1
+        var arr1 = ['Apple', 'Pinapple', 'Blueberry'];
+        console.log(`Задача 1.\n\nИсходный массив:\n${arr1}`);
+        mostLongStr(arr1);
+        console.log(`Итоговый массив:\n${arr1}`);
+
+
+        //Задача 2
+        marker('Задача 2<br>THIS TEXT WAS ADDED USING A SCRIPT :)', 'purple', 25)
+
+
+        //Задача 3
+        var arr2 = ['images/пирамида.png', 'images/шестиугольник.jpg'];
+        placeImages(arr2);
+
+
+        function placeImages(array){
+            for(var i in array)
+                box.innerHTML += 
+                `<img style="display: flex; margin: 5px; height: 300px; width: 300px" src="${array[i]}">` + '\n';
+        }
+
+        function marker(text, color, number){
+            document.write(
+                `<p style="font-family: Comic Sans MS; color: ${color}; font-size: ${number}px">${text}</p>`
+            );
+        }
+
+        function mostLongStr(array){
+            var str = '';
+            for(var i = 0; i < arr1.length; i++)
+                if(arr1[i].length > str.length)
+                    str = arr1[i];
+            arr1 = [];
+            for(var i = 0; i < str.length; i++){
+                arr1[i] = str[i];
+            }
+        }
+    </script>
+</body>
+</html>
